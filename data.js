@@ -66,3 +66,86 @@ const modules = [
     writing:{analysis:['作文任务：Writing an ending to the story。','结构：承接原冲突—人物行动—结果—环保主题升华。','高分要点：结尾要回应plastic/green life主题，并让人物态度发生变化。'],exercises:['为环保故事写80词结尾，至少使用3个构词法词汇。','把普通结尾“We should protect the environment.”改写成有情节、有行动的结尾。'],sample:'At last, the family stopped buying too many plastic bags. They reused boxes and upcycled bottles into small gardens. The home became cleaner, and everyone understood that green living begins with small habits.'}
   }
 ];
+
+const workbenchDetails = {
+  u1: {
+    vocabularyGroups: ['人物品质：responsible, creative, confident, patient, brave。', '行动表达：set an example, solve a problem, keep practising, help people in need。', '评价句型：What impresses me most is... / The reason why I admire him or her is...'],
+    reading: {
+      difficulties: ['作品/人物介绍通常不是按时间顺序展开，而是围绕“对象—特点—意义”组织信息。', '遇到代词this, it, they时要回读上一句，判断指代的是作品、人物还是行为。', '作者态度常隐藏在形容词和结果句中，如safe, meaningful, encourage等。'],
+      strategies: ['第一遍只圈出人物/作品名称、核心事件和作者态度。', '第二遍用三栏笔记整理Evidence—Quality—Influence。', '回答推断题时必须引用动作或结果作依据，避免只写个人感觉。'],
+      exercises: ['阅读短文后写出one-sentence summary：This passage mainly introduces... because...', '找出3个评价性形容词，并说明它们分别评价谁/什么。', '用Evidence—Quality—Influence表格整理一位榜样。'],
+      answers: ['摘要需包含介绍对象和核心价值。', '能对应原文对象并解释语义即可。', 'Evidence写具体事件；Quality写品质词；Influence写对他人/社会的影响。']
+    },
+    grammarDetail: ['when强调时间点或时间段；while多接持续动作。', 'because回答原因，不能和so在同一句中重复使用。', 'so that表示目的，后面常接can/could/will/would等情态或助动词。'],
+    grammarPractice: ['He joined the art club. He could learn from others. (so that)', 'I was reading about the artist. My sister was making notes. (while)', '改错：Because she is creative, so we chose her as our role model.'],
+    grammarAnswers: ['He joined the art club so that he could learn from others.', 'I was reading about the artist while my sister was making notes.', 'Because she is creative, we chose her as our role model.'],
+    writingChecklist: ['是否有清楚推荐对象？', '是否用具体事例证明品质？', '是否解释作品/人物对青少年的启发？', '是否至少使用一个状语从句？']
+  },
+  u2: {
+    vocabularyGroups: ['金钱动作：save, spend, pay, cost, donate, raise。', '价值判断：valuable, worth, wise, necessary, wasteful。', '计划表达：make a budget, set aside, spend...on..., donate...to...'],
+    reading: {
+      difficulties: ['故事类文本需要关注“人物选择”而不只是故事结局。', 'Money既可能是名字也可能指金钱，要结合大小写和上下文判断。', '评论题要写主题，如love, honesty, wise spending，而不是只写情节。'],
+      strategies: ['用Beginning—Problem—Choice—Result复述故事。', '圈出人物说的话和做的事，用来推断性格。', '把每个金钱决定归类为need, want, save或give。'],
+      exercises: ['写出故事中最重要的choice，并解释它说明了什么。', '判断句子是fact还是opinion：Money can buy everything valuable.', '根据短文推断人物感受，并写出依据。'],
+      answers: ['选择需具体，解释需指向主题或品质。', 'Opinion。', '答案需包含感受词和文本依据。']
+    },
+    grammarDetail: ['if条件句谈未来时，主句用will/can，if从句用一般现在时。', 'although表示让步，不与but连用。', 'so...that...强调结果，so后接形容词或副词。'],
+    grammarPractice: ['If I ___ (have) 100 yuan, I ___ (save) half of it.', 'Although online shopping is convenient, but we should compare prices first.（改错）', 'The bag was expensive. I could not buy it. (so...that)'],
+    grammarAnswers: ['have; will save', 'Although online shopping is convenient, we should compare prices first.', 'The bag was so expensive that I could not buy it.'],
+    writingChecklist: ['是否介绍故事名称或类型？', '情节概括是否控制在2—3句？', '是否有观点+证据？', '是否联系自己的金钱观？']
+  },
+  u3: {
+    vocabularyGroups: ['历史对象：statue, museum, memory, tradition, heritage。', '传承动作：record, protect, pass on, interview, display。', '不确定表达：may, might, perhaps, probably, I am not sure whether...'],
+    reading: {
+      difficulties: ['演讲文本常通过重复、感叹和呼吁表达情感。', '历史信息包含时间、地点、人物、事件，容易混在一起。', '作者可能既表达骄傲也表达担忧，要注意态度变化。'],
+      strategies: ['用不同颜色标记fact和feeling。', '把历史事件整理成timeline。', '遇到不确定信息时用may/might表达，避免绝对化。'],
+      exercises: ['从一段演讲中找出一句fact和一句feeling。', '为历史项目写3个采访问题。', '用may/might改写一个不确定推断。'],
+      answers: ['Fact可验证；feeling含情绪或评价。', '问题应围绕时间、经历、意义。', '如It might be a symbol of local courage.']
+    },
+    grammarDetail: ['历史叙述常用when连接时间背景。', 'because说明保护或传承原因。', 'so that说明项目目的，如保存记忆、吸引年轻人。'],
+    grammarPractice: ['People built the museum. More children could learn local history. (so that)', 'We felt proud. We heard the old story. (when)', '用because写一句保护传统的理由。'],
+    grammarAnswers: ['People built the museum so that more children could learn local history.', 'We felt proud when we heard the old story.', '示例：We protect traditions because they connect the past with the present.'],
+    writingChecklist: ['创意方法是否具体可执行？', '是否写出参与者和步骤？', '是否说明目标人群？', '是否有预期效果？']
+  },
+  u4: {
+    vocabularyGroups: ['英雄品质：brave, selfless, calm, determined, generous。', '经历表达：was born, worked as, saved, devoted...to..., made a difference。', '引用表达：He/She once said, “...” / In his or her words,...'],
+    reading: {
+      difficulties: ['人物传记不是所有事件都同等重要，要找改变人生或体现品质的关键事件。', 'What was she like?问性格品质，不是外貌。', '引用常用来证明人物信念或增强真实感。'],
+      strategies: ['用Life event—Quality—Evidence表格读传记。', '看到who/that引导的长句时先找被修饰的人。', '评价英雄时写“ordinary job + extraordinary action”。'],
+      exercises: ['找出人物最能体现hero品质的一件事。', '解释一句quotation支持了什么观点。', '用who定语从句定义一位身边英雄。'],
+      answers: ['事件需能证明品质。', '说明引用和人物信念/行动的关系。', '示例：A community worker is a person who helps neighbours solve daily problems.']
+    },
+    grammarDetail: ['who通常修饰人，which修饰物，that可修饰人或物。', '关系词在从句中作主语时不能省略。', '定语从句中不要重复he/she/it等代词。'],
+    grammarPractice: ['This is the doctor. The doctor helped my grandma. (who)', 'The book which it tells his life is popular.（改错）', '用定语从句写一句：英雄是……的人。'],
+    grammarAnswers: ['This is the doctor who helped my grandma.', 'The book which tells his life is popular.', '示例：A hero is a person who brings hope to others.'],
+    writingChecklist: ['开头是否点明人物身份和主题品质？', '是否选择2—3个关键经历而非流水账？', '是否有定语从句？', '结尾是否写影响或个人启发？']
+  },
+  u5: {
+    vocabularyGroups: ['生态概念：balance, rainforest, habitat, species, ecosystem。', '问题原因：pollution, hunting, loss of homes, climate change。', '保护行动：set up reserves, plant trees, make laws, reduce waste。'],
+    reading: {
+      difficulties: ['环保文本常有因果链：人类活动—栖息地变化—动物数量变化。', '引用可能来自专家、志愿者或数据说明，要判断它支持哪个观点。', 'success不代表问题完全消失，要区分improved和solved。'],
+      strategies: ['画Cause—Problem—Action—Result流程图。', '把数据或对比词圈出，如fewer, more, no longer。', '读引用后问：它证明了作者哪一句观点？'],
+      exercises: ['列出一种动物in danger的两个原因。', '找出文中的一个action并预测result。', '用which/that解释nature reserve。'],
+      answers: ['原因可为栖息地丧失、污染、非法捕猎等。', '预测需符合保护逻辑。', '示例：A nature reserve is a place that protects animals and plants.']
+    },
+    grammarDetail: ['which/that定语从句可让环保概念解释更准确。', '关系词作宾语时可省略，如the plan (that) we made。', '先行词是事物时不要误用who。'],
+    grammarPractice: ['Rainforests are homes. They support many species. (which/that)', 'The bird who lives in this forest is rare.（改错）', '写一句包含the project that...的句子。'],
+    grammarAnswers: ['Rainforests are homes which/that support many species.', 'The bird which/that lives in this forest is rare.', '示例：The project that students joined saved many young trees.'],
+    writingChecklist: ['是否说明动物过去的危险处境？', '是否写清保护措施？', '是否用变化对比呈现成功？', '是否给出启示或呼吁？']
+  },
+  u6: {
+    vocabularyGroups: ['3R词汇：reduce, reuse, recycle；升级再造：upcycle。', '构词法：re-表示again；-ful表示full of；-less表示without。', '习惯表达：turn off, save water, avoid waste, make full use of。'],
+    reading: {
+      difficulties: ['Plastic话题需要平衡利弊，不能只写good或bad。', '预测故事结尾时要依据前文冲突和主题。', 'message通常通过人物改变或讽刺结果体现。'],
+      strategies: ['列T-chart比较Advantages和Problems。', '续写前先写出原故事的conflict和lesson。', '检查结尾是否回应green living而非突然换主题。'],
+      exercises: ['列出plastic的两个优点和两个问题。', '为故事续写设计一个turning point。', '找出3个带前缀/后缀的环保词并猜词义。'],
+      answers: ['优点如cheap/useful/light；问题如pollution/harm animals。', '转折点应推动人物采取环保行动。', '如reuse, careless, helpful等，解释词缀意义即可。']
+    },
+    grammarDetail: ['re- + 动词表示再次做某事，如reuse, rebuild。', '-ful表示“充满……的”，-less表示“没有……的”。', '合成词常把两个词组合成新意义，如environment-friendly。'],
+    grammarPractice: ['写出care的两个派生词并造句。', 'recycle和upcycle有什么区别？用英文各写一句。', '用not only...but also...说明一个green habit。'],
+    grammarAnswers: ['careful/careless；例句合理即可。', 'Recycle often changes waste into material again; upcycle turns old things into something better or more useful.', '示例：Using a cloth bag not only reduces plastic but also saves money.'],
+    writingChecklist: ['续写是否承接原故事冲突？', '人物是否采取了具体环保行动？', '是否使用构词法词汇？', '结尾是否点明message？']
+  }
+};
+
+modules.forEach(module => Object.assign(module, workbenchDetails[module.id]));

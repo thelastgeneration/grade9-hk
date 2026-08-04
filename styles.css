@@ -64,3 +64,11 @@ footer { padding: 24px; text-align: center; color: var(--muted); }
 .writing-panel { margin-top: 16px; background: #fbf7ff; }
 .writing-panel h5 { margin: 12px 0 6px; color: #6b3fa0; font-size: 15px; }
 @media (max-width: 640px) { .outline-list { grid-template-columns: 1fr; } .outline-list dd { margin-bottom: 8px; } }
+.deep-panel { margin-top: 16px; }
+.reading-panel { background: #f7fbff; }
+.grammar-workshop { background: #fffdf6; }
+.vocab-panel { margin-top: 16px; }
+.mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.panel h5 { margin: 12px 0 6px; color: var(--primary-dark); font-size: 15px; }
+.knowledge-note { margin: 0 0 14px; padding: 12px 14px; border-radius: 12px; background: #eef8ff; border: 1px dashed #b7d7ff; }
+.knowledge-note ul { margin: 6px 0 0; }
