@@ -12,7 +12,7 @@ function escapeHtml(value) {
 }
 
 function moduleMatches(module) {
-  const haystack = [module.title, module.theme, module.page, ...Object.values(module.outline), ...module.focus, ...module.difficulty, ...module.grammar, ...module.words.flat(), ...module.exercises, ...module.writing.analysis, ...module.writing.exercises].join(' ').toLowerCase();
+  const haystack = [module.title, module.theme, module.page, ...Object.values(module.outline), ...module.focus, ...module.difficulty, ...module.grammar, ...module.words.flat(), ...module.exercises, ...module.writing.analysis, ...module.writing.exercises, ...(module.vocabularyGroups || []), ...((module.reading && module.reading.difficulties) || []), ...((module.reading && module.reading.strategies) || []), ...((module.reading && module.reading.exercises) || []), ...((module.grammarDetail) || []), ...((module.grammarPractice) || []), ...((module.writingChecklist) || [])].join(' ').toLowerCase();
   const matchesQuery = !state.query || haystack.includes(state.query.toLowerCase());
   const matchesFilter = state.filter === 'all' || module.id === state.filter;
   return matchesQuery && matchesFilter;
@@ -43,6 +43,41 @@ function list(items) {
   return `<ul>${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
 }
 
+
+function qaList(questions, answers) {
+  return questions.map((question, index) => `<div class="exercise"><strong>${index + 1}.</strong> ${escapeHtml(question)}<br><span class="answer">参考答案：</span>${escapeHtml(answers[index] || '答案合理即可。')}</div>`).join('');
+}
+
+function renderReading(reading) {
+  if (!reading) return '';
+  return `
+    <section class="panel deep-panel reading-panel">
+      <h4>阅读难点突破与阅读习题</h4>
+      <div class="mini-grid">
+        <div><h5>阅读难点</h5>${list(reading.difficulties)}</div>
+        <div><h5>阅读策略</h5>${list(reading.strategies)}</div>
+      </div>
+      <h5>阅读训练</h5>
+      ${qaList(reading.exercises, reading.answers)}
+    </section>
+  `;
+}
+
+function renderGrammarWorkshop(module) {
+  if (!module.grammarDetail) return '';
+  return `
+    <section class="panel deep-panel grammar-workshop">
+      <h4>语法精讲与分层练习</h4>
+      <div class="mini-grid">
+        <div><h5>知识点拆解</h5>${list(module.grammarDetail)}</div>
+        <div><h5>基础定位</h5>${list(module.grammar)}</div>
+      </div>
+      <h5>专项练习</h5>
+      ${qaList(module.grammarPractice, module.grammarAnswers)}
+    </section>
+  `;
+}
+
 function renderModule(module) {
   return `
     <article>
@@ -66,8 +101,9 @@ function renderModule(module) {
         <section class="panel"><h4>教学难点</h4>${list(module.difficulty)}</section>
         <section class="panel"><h4>语法点与语法习题</h4>${list(module.grammar)}</section>
       </div>
-      <section class="panel">
+      <section class="panel vocab-panel">
         <h4>生词表：中英释义 + 音标 + 例句</h4>
+        ${module.vocabularyGroups ? `<div class="knowledge-note"><strong>词汇知识点：</strong>${list(module.vocabularyGroups)}</div>` : ''}
         <table class="word-table">
           <thead><tr><th>单词/短语</th><th>音标</th><th>释义</th><th>原创例句</th></tr></thead>
           <tbody>${module.words.map(([word, phonetic, meaning, example]) => `
@@ -75,6 +111,8 @@ function renderModule(module) {
           `).join('')}</tbody>
         </table>
       </section>
+      ${renderReading(module.reading)}
+      ${renderGrammarWorkshop(module)}
       <section class="panel">
         <h4>基础与综合习题</h4>
         ${module.exercises.map((exercise, index) => `<div class="exercise"><strong>${index + 1}.</strong> ${escapeHtml(exercise)}<br><span class="answer">参考答案：</span>${escapeHtml(module.answers[index])}</div>`).join('')}
@@ -83,6 +121,7 @@ function renderModule(module) {
         <h4>作文解析与习题</h4>
         <h5>写作解析</h5>${list(module.writing.analysis)}
         <h5>写作习题</h5>${list(module.writing.exercises)}
+        ${module.writingChecklist ? `<h5>写作检查清单</h5>${list(module.writingChecklist)}` : ''}
         <div class="exercise"><strong>示范表达：</strong>${escapeHtml(module.writing.sample)}</div>
       </section>
     </article>
