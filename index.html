@@ -3,45 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>外研版九年级上英语课外辅导工作台</title>
+  <title>外研版九年级英语（正确大纲）课外辅导工作台</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="hero">
     <div>
       <p class="eyebrow">Waiyan / NSE Grade 9A Tutor Console</p>
-      <h1>外研版初三上英语课外辅导工作台</h1>
-      <p class="subtitle">以外研版九年级上册常见模块主题为基准，重组每单元教学重难点、核心词汇、语法讲解与配套练习，供课外辅导老师备课、诊断和布置作业使用。</p>
+      <h1>外研版初三英语 Unit 1–6 课外辅导工作台</h1>
+      <p class="subtitle">严格按教材 Scope and sequence 的 Unit 1–6：Teenagers today、On the money、Past passing by、Heroes、A fine balance、Live green 重建内容，覆盖生词表、语法点与习题、作文解析与习题。</p>
     </div>
     <div class="hero-card">
       <strong>使用建议</strong>
-      <span>先用“模块总览”定位学生薄弱点，再切换模块查看词汇、语法和习题。所有例句与练习均为原创，避免替代教材原文。</span>
+      <span>先用“单元总览”定位课次，再切换单元查看大纲定位、生词表、语法讲解、基础习题和作文训练。所有例句与练习均为原创，避免替代教材原文。</span>
     </div>
   </header>
 
   <main>
     <section class="toolbar" aria-label="筛选工具">
       <label>
-        搜索模块 / 词汇 / 语法
-        <input id="searchInput" type="search" placeholder="如：被动语态、wonder、Module 6" />
+        搜索单元 / 词汇 / 语法 / 作文
+        <input id="searchInput" type="search" placeholder="如：Teenagers、定语从句、upcycling、作文" />
       </label>
       <label>
-        模块筛选
+        单元筛选
         <select id="moduleFilter">
-          <option value="all">全部模块</option>
+          <option value="all">全部单元</option>
         </select>
       </label>
       <button id="resetBtn" type="button">重置</button>
     </section>
 
     <section class="overview">
-      <h2>模块总览</h2>
+      <h2>单元总览</h2>
       <div id="overviewGrid" class="overview-grid"></div>
     </section>
 
     <section class="workspace">
       <aside>
-        <h2>模块导航</h2>
+        <h2>单元导航</h2>
         <nav id="moduleNav" class="module-nav"></nav>
       </aside>
       <section id="moduleDetails" class="details" aria-live="polite"></section>
